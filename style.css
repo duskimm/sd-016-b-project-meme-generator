@@ -24,7 +24,7 @@ header h1 {
 
 section {
   padding-top: 10px;
-  background-color:snow;
+  background-color: snow;
   width: 700px;
   position: relative;
   top: 100px;
@@ -58,21 +58,21 @@ section {
 #fire {
   background-color: red;
   font-size: 20px;
-  border-radius: 5px 5px;
+  border-radius: 5px;
   color: white;
 }
 
 #water {
   background-color: blue;
   font-size: 20px;
-  border-radius: 5px 5px;
+  border-radius: 5px;
   color: white;
 }
 
 #earth {
   background-color: green;
   font-size: 20px;
-  border-radius: 5px 5px;
+  border-radius: 5px;
   color: white;
 }
 
