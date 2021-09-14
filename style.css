@@ -14,14 +14,14 @@
     align-items: flex-end;
     background-color: white;
     display: block;
-    height: 400px;
+    height: 500px;
     position: relative;
     justify-content: center;
     width: 500px;
 }
 
 #meme-image {
-    height: 400px;
+    height: 500px;
     width: 500px;
 }
 
@@ -57,4 +57,13 @@
 
 .earth {
     border: 6px groove green;
+}
+
+.ready-images {
+    height: 100px;
+    width: 100px;
+}
+
+.ready-images:hover {
+    cursor: pointer;
 }

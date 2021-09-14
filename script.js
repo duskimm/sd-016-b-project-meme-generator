@@ -35,20 +35,22 @@ function addBorder(event) {
   if (container.className !== className) {
     container.className = className;
   } else {
-    container.className = '';
+    container.className = 'border';
   }
-
 }
 
 for (let index = 0; index < buttons.length; index += 1) {
   buttons[index].addEventListener('click', addBorder);
 }
 
-// let waterBtn = document.getElementById('water');
+let readyMemes = document.getElementsByClassName('ready-images');
 
-// function addBorder() {
-//   let color = window.getComputedStyle(fireBtn).getPropertyValue('background-color');
-//   createBorder('5px', 'dashed', color);
-// }
+function addReadyMeme(event) {
+  let img = event.target.src;
 
-// waterBtn.addEventListener('click', addBorder)
+  document.getElementById('meme-image').src = img;
+}
+
+for (let index = 0; index < readyMemes.length; index += 1) {
+  readyMemes[index].addEventListener('click', addReadyMeme);
+}
