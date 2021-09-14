@@ -49,3 +49,22 @@ function addMultiplesEventsAndListeners(arr, eventsName, listener) {
     });
   });
 }
+
+const user = {
+  memeImage: '',
+  memeText: '',
+}
+
+const staticElement = {
+  textInput: getOne('#text-input'),
+}
+
+function saveMemeText() {
+  staticElement.textInput.addEventListener('keyup', (event) => {
+    user.memeText = event.target.value;
+  });
+}
+
+window.onload = () => {
+  saveMemeText();
+};
