@@ -6,6 +6,7 @@
   background-color: #fff;
   border: 1px solid #000;
   height: 500px;
+  position: relative;
   width: 500px;
 }
 #meme-image {
@@ -13,4 +14,11 @@
   background-size: cover;
   height: 100%;
   width: 100%;
+}
+#meme-text {
+  bottom: 0;
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  text-shadow: 5px 5px 5px #000;
 }
