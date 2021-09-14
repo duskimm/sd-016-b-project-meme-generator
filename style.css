@@ -38,3 +38,10 @@
   position: absolute;
   text-shadow: 5px 5px 5px #000;
 }
+.meme-template {
+  border: 1px solid #000;
+  display: inline-block;
+  margin-top: 2rem;
+  width: 80px;
+  height: 80px;
+}
