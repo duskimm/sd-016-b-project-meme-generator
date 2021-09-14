@@ -66,10 +66,10 @@ const staticElement = {
 }
 
 const memeTemplates = {
-  meme1: './imgs/meme-1.png',
-  meme2: './imgs/meme-2.png',
-  meme3: './imgs/meme-3.png',
-  meme4: './imgs/meme-4.png',
+  meme1: '/imgs/meme1.png',
+  meme2: '/imgs/meme2.png',
+  meme3: '/imgs/meme3.png',
+  meme4: '/imgs/meme4.png',
 }
 
 function saveMemeText(event) {
@@ -142,19 +142,19 @@ function buttonsBorder() {
 }
 
 function firstMeme() {
-  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme1})`;
+  staticElement.memeImage.src = memeTemplates.meme1;
 }
 
 function secondMeme() {
-  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme2})`;
+  staticElement.memeImage.src = memeTemplates.meme2;
 }
 
 function thirdMeme() {
-  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme3})`;
+  staticElement.memeImage.src = memeTemplates.meme3;
 }
 
 function fourthMeme() {
-  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme4})`;
+  staticElement.memeImage.src = memeTemplates.meme4;
 }
 
 function applyTemplateMeme(event) {
