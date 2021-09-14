@@ -14,30 +14,6 @@
 .buttons-border-container :nth-child(3) {
   background-color: #008000;
 }
-.divs-meme-container :nth-child(1) {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./imgs/meme-1.png");
-}
-.divs-meme-container :nth-child(2) {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./imgs/meme-2.png");
-}
-.divs-meme-container :nth-child(3) {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./imgs/meme-3.png");
-}
-.divs-meme-container :nth-child(4) {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./imgs/meme-4.png");
-}
 .container {
   margin: auto;
   width: calc(80% - 80px);
