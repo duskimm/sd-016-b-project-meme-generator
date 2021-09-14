@@ -5,8 +5,21 @@
 #meme-image-container {
     align-items: flex-end;
     border: 1px solid black;
-    display: flex;
+    background-color: white;
+    display: block;
     height: 400px;
     justify-content: center;
     width: 500px;
+}
+
+#meme-image {
+    position: absolute;
+    height: 400px;
+    width: 500px;
+}
+
+#meme-text {
+    align-self: flex-end;
+    position: absolute;
+    z-index: 1;
 }
