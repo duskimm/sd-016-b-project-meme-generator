@@ -62,6 +62,14 @@ const staticElement = {
   memeImage: getOne('#meme-image'),
   memeText: getOne('#meme-text'),
   borderButtons: getAll('.border'),
+  memeTemplates: getAll('.meme-template'),
+}
+
+const memeTemplates = {
+  meme1: './imgs/meme-1.png',
+  meme2: './imgs/meme-2.png',
+  meme3: './imgs/meme-3.png',
+  meme4: './imgs/meme-4.png',
 }
 
 function saveMemeText(event) {
@@ -133,10 +141,50 @@ function buttonsBorder() {
   addMultiplesListeners(staticElement.borderButtons, 'click', applyBorder)
 }
 
+function firstMeme() {
+  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme1})`;
+}
+
+function secondMeme() {
+  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme2})`;
+}
+
+function thirdMeme() {
+  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme3})`;
+}
+
+function fourthMeme() {
+  staticElement.memeImage.style.backgroundImage = `url(${memeTemplates.meme4})`;
+}
+
+function applyTemplateMeme(event) {
+  switch(event.target.id){
+    case('meme-1'):
+      firstMeme();
+      break
+    case('meme-2'):
+      secondMeme();
+      break
+    case('meme-3'):
+      thirdMeme();
+      break
+    case('meme-4'):
+      fourthMeme();
+      break
+    default:
+      alert('Erro ao selecionar meme!');
+  }
+}
+
+function buttonsMeme() {
+  addMultiplesListeners(staticElement.memeTemplates, 'click', applyTemplateMeme)
+}
+
 function startMemes() {
   inputMemeAtt();
   buttonMemeInput();
   buttonsBorder();
+  buttonsMeme();
 }
 
 window.onload = () => {
