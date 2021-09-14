@@ -5,8 +5,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
+      <h1>Gerador de Memes</h1>
+    </header>
+    <section>
+    <div>
     <input type="text" id="text-input" maxlength="60">
+    <!-- ref: https://www.w3schools.com/tags/tag_input.asp -->
     <input type="file" id="meme-insert">
+    </div>
     <div id="meme-image-container">
       <p id="meme-text"></p>
       <img id="meme-image" width="350" height="250">
@@ -16,6 +23,13 @@
       <button id="water">Água</button>
       <button id="earth">Terra</button>
     </div>
+    <div id="other-memes">
+      <img id="meme-1" src="imgs/meme1.png" alt="Faustão">
+      <img id="meme-2" src="imgs/meme2.png" alt="Menina com nojo">
+      <img id="meme-3" src="imgs/meme3.png" alt="Seu Madruga">
+      <img id="meme-4" src="imgs/meme4.png" alt="Vin Diesel">
+    </div>
+  </section>
     <script src="script.js"></script>
   </body>
 </html>

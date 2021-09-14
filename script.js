@@ -2,6 +2,8 @@ const getInputText = document.getElementById('text-input');
 const getInputImage = document.getElementById('meme-insert');
 const getStyleButton = document.getElementById('style-button').children;
 const getContainer = document.getElementById('meme-image-container');
+const getOtherMemes = document.getElementById('other-memes').children;
+const getImageElement = document.getElementById('meme-image');
 
 function showingTextInsideDiv() {
   const text = document.getElementById('meme-text');
@@ -10,8 +12,9 @@ function showingTextInsideDiv() {
 
 getInputText.addEventListener('input', showingTextInsideDiv);
 
+// ref: https://stackoverflow.com/questions/4459379
+// author: BrianBurns
 function showImage() {
-  const getImageElement = document.getElementById('meme-image');
   getImageElement.src = URL.createObjectURL(getInputImage.files[0]);
 }
 
@@ -34,3 +37,11 @@ function styleEarth() {
 }
 
 getStyleButton[2].addEventListener('click', styleEarth);
+
+function getMeme(event) {
+  getImageElement.src = event.target.src;
+}
+
+for (let i = 0; i < getOtherMemes.length; i += 1) {
+  getOtherMemes[i].addEventListener('click', getMeme);
+}
