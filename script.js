@@ -57,6 +57,7 @@ const user = {
 
 const staticElement = {
   textInput: getOne('#text-input'),
+  memeInsert: getOne('#meme-insert'),
 }
 
 function saveMemeText() {
@@ -65,6 +66,11 @@ function saveMemeText() {
   });
 }
 
+function saveMemeImgPath() {
+  staticElement.memeInsert.addEventListener('input', (event) => {
+    user.memeImage = event.target.value;
+  });
+}
+
 window.onload = () => {
-  saveMemeText();
 };
