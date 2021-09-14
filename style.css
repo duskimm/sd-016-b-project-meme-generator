@@ -6,9 +6,12 @@
     display: block;
 }
 
+.border {
+    border: 1px solid black;
+}
+
 #meme-image-container {
     align-items: flex-end;
-    border: 1px solid black;
     background-color: white;
     display: block;
     height: 400px;
@@ -30,4 +33,28 @@
     position: absolute;
     text-shadow: 5px 5px 5px black;
     text-align: center;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
+
+.fire {
+    border: 3px dashed red;
+}
+
+.water {
+    border: 5px double blue;
+}
+
+.earth {
+    border: 6px groove green;
 }
