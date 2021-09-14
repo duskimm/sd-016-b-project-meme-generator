@@ -58,6 +58,7 @@ const user = {
 const staticElement = {
   textInput: getOne('#text-input'),
   memeInsert: getOne('#meme-insert'),
+  memeImage: getOne('#meme-image'),
 }
 
 function saveMemeText() {
@@ -66,11 +67,32 @@ function saveMemeText() {
   });
 }
 
-function saveMemeImgPath() {
+/* funções saveMemeImgPath e applyMemeImg foram feitas utilizando estas referências:
+https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
+https://github.com/tryber/sd-016-b-project-meme-generator/pull/1/files
+https://developer.mozilla.org/en-US/docs/Web/API/FileList */
+
+function saveMemeImgPath(event) {
+  if (event.target.files[0]) {
+    user.memeImage = URL.createObjectURL(event.target.files[0]);
+  }
+}
+
+function applyMemeImg() {
+  staticElement.memeImage.style.backgroundImage = `url(${user.memeImage})`;
+}
+
+function buttonMemeInput() {
   staticElement.memeInsert.addEventListener('input', (event) => {
-    user.memeImage = event.target.value;
+    saveMemeImgPath(event);
+    applyMemeImg();
   });
 }
 
+function startMemes() {
+  buttonMemeInput();
+}
+
 window.onload = () => {
+  startMemes();
 };
