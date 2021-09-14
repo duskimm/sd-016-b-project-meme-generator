@@ -1,9 +1,14 @@
 const textInput = document.querySelector('#text-input');
 const memeText = document.querySelector('#meme-text');
 const memeContainer = document.querySelector('#meme-image-container');
+const memeImage = document.querySelector('#meme-image');
 const fireButton = document.querySelector('#fire');
 const waterButton = document.querySelector('#water');
 const earthButton = document.querySelector('#earth');
+const image1 = document.querySelector('#meme-1')
+const image2 = document.querySelector('#meme-2')
+const image3 = document.querySelector('#meme-3')
+const image4 = document.querySelector('#meme-4')
 
 window.addEventListener('load', function() {
     document.querySelector('input[type="file"]').addEventListener('change', function() {
@@ -52,3 +57,23 @@ function changeEarth () {
     }
 }
 earthButton.addEventListener('click', changeEarth)
+
+function changeToFirst (event) {
+    memeImage.src = event.target.src;
+}
+image1.addEventListener('click', changeToFirst);
+
+function changeToSecond (event) {
+    memeImage.src = event.target.src;
+}
+image2.addEventListener('click', changeToFirst);
+
+function changeToThird(event) {
+    memeImage.src = event.target.src;
+}
+image3.addEventListener('click', changeToFirst);
+
+function changeToFourth (event) {
+    memeImage.src = event.target.src;
+}
+image4.addEventListener('click', changeToFirst);

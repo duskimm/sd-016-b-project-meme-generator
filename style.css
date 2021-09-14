@@ -1,11 +1,16 @@
 html {
     font-family: Roboto, sans-serif;
 }
+
+h1 {
+    margin-bottom: 5px;
+}
+
 #meme-image-container {
     border: 1px solid black;
     max-width: 50%;
     height: 400px;
-    margin-top: 20px;
+    margin-top: 5px;
     position: relative;
     text-align: center;
     background-color: white;
@@ -28,7 +33,6 @@ html {
     height: 100%;
     width: 100%;
 }
-
 
 #insert-container {
     margin-top: 10px;
@@ -56,19 +60,16 @@ html {
     font-weight: bold;
 }
 
-.fire {
-    background-color: red;
-    color: white;
+#meme-container img {
+    max-height: 70px;
+    max-width: 100px;
+    border: 2px solid black;
 }
 
-.water {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
+img {
+    cursor: pointer;
 }
 
-.earth {
-    background-color: green;
-    color: white;
-    font-weight: bold;
+button {
+    cursor: pointer;
 }
