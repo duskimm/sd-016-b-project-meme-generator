@@ -2,8 +2,8 @@ html {
     font-family: Roboto, sans-serif;
 }
 #meme-image-container {
-    border: 1px black solid;
-    max-width: 30%;
+    border: 1px solid black;
+    max-width: 50%;
     height: 400px;
     margin-top: 20px;
     position: relative;
@@ -11,13 +11,14 @@ html {
     background-color: white;
 }
 
+
 #meme-text {
   text-shadow: 5px 5px 5px black;
   color: white;
   font-size: 30px;
   position: absolute;
   z-index: 100;
-  top: 230px;
+  top: 280px;
 }
 
 #meme-image {
@@ -31,4 +32,43 @@ html {
 
 #insert-container {
     margin-top: 10px;
+}
+
+#change-buttons button {
+    margin: 10px 65px;
+    padding: 0 20px;
+}
+
+#fire {
+    background-color: red;
+    color: white;
+}
+
+#water {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+#earth {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.fire {
+    background-color: red;
+    color: white;
+}
+
+.water {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+.earth {
+    background-color: green;
+    color: white;
+    font-weight: bold;
 }
