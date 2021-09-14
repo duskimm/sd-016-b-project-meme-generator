@@ -1,0 +1,12 @@
+#create-text {
+    display: block;
+}
+
+#meme-image-container {
+    align-items: flex-end;
+    border: 1px solid black;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    width: 500px;
+}
