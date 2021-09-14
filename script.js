@@ -59,11 +59,21 @@ const staticElement = {
   textInput: getOne('#text-input'),
   memeInsert: getOne('#meme-insert'),
   memeImage: getOne('#meme-image'),
+  memeText: getOne('#meme-text'),
 }
 
-function saveMemeText() {
+function saveMemeText(event) {
+  user.memeText = event.target.value;
+}
+
+function applyMemeText() {
+  staticElement.memeText.innerText = user.memeText;
+}
+
+function inputMemeAtt() {
   staticElement.textInput.addEventListener('keyup', (event) => {
-    user.memeText = event.target.value;
+    saveMemeText(event);
+    applyMemeText();
   });
 }
 
@@ -90,6 +100,7 @@ function buttonMemeInput() {
 }
 
 function startMemes() {
+  inputMemeAtt();
   buttonMemeInput();
 }
 
