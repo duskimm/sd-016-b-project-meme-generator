@@ -6,54 +6,16 @@ function getAll(element) {
   return document.querySelectorAll(element);
 }
 
-function createElement(tag) {
-  return document.createElement(tag);
-}
-
-function addClass(element, newClass) {
-  element.classList.add(newClass);
-}
-
-function removeClass(element, delClass) {
-  element.classList.remove(delClass);
-}
-
-function plugHtml(fatherElement, sonElement) {
-  fatherElement.appendChild(sonElement);
-}
-
-function removeOfHtml(fatherElement, sonElement) {
-  fatherElement.removeChild(sonElement);
-}
-
 function addMultiplesListeners(arr, eventName, listener) {
   arr.forEach((element) => {
     element.addEventListener(eventName, listener, false);
   });
 }
 
-function addMultiplesEvents(element, eventsName, listener) {
-  const events = eventsName.split(' ');
-
-  events.forEach((event) => {
-    element.addEventListener(event, listener, false);
-  });
-}
-
-function addMultiplesEventsAndListeners(arr, eventsName, listener) {
-  const events = eventsName.split(' ');
-
-  arr.forEach((element) => {
-    events.forEach((event) => {
-      element.addEventListener(event, listener, false);
-    });
-  });
-}
-
 const user = {
   memeImage: '',
   memeText: '',
-}
+};
 
 const staticElement = {
   textInput: getOne('#text-input'),
@@ -63,14 +25,14 @@ const staticElement = {
   memeText: getOne('#meme-text'),
   borderButtons: getAll('.border'),
   memeTemplates: getAll('.meme-template'),
-}
+};
 
 const memeTemplates = {
   meme1: '/imgs/meme1.png',
   meme2: '/imgs/meme2.png',
   meme3: '/imgs/meme3.png',
   meme4: '/imgs/meme4.png',
-}
+};
 
 function saveMemeText(event) {
   user.memeText = event.target.value;
@@ -122,23 +84,23 @@ function earthBorder() {
 }
 
 function applyBorder(event) {
-  switch(event.target.id){
-    case('fire'):
-      fireBorder();
-      break
-    case('water'):
-      waterBorder();
-      break
-    case('earth'):
-      earthBorder();
-      break
-    default:
-      alert('Erro ao selecionar a borda!');
+  switch (event.target.id) {
+  case ('fire'):
+    fireBorder();
+    break;
+  case ('water'):
+    waterBorder();
+    break;
+  case ('earth'):
+    earthBorder();
+    break;
+  default:
+    alert('Erro ao selecionar a borda!');
   }
 }
 
 function buttonsBorder() {
-  addMultiplesListeners(staticElement.borderButtons, 'click', applyBorder)
+  addMultiplesListeners(staticElement.borderButtons, 'click', applyBorder);
 }
 
 function firstMeme() {
@@ -158,26 +120,26 @@ function fourthMeme() {
 }
 
 function applyTemplateMeme(event) {
-  switch(event.target.id){
-    case('meme-1'):
-      firstMeme();
-      break
-    case('meme-2'):
-      secondMeme();
-      break
-    case('meme-3'):
-      thirdMeme();
-      break
-    case('meme-4'):
-      fourthMeme();
-      break
-    default:
-      alert('Erro ao selecionar meme!');
+  switch (event.target.id) {
+  case ('meme-1'):
+    firstMeme();
+    break;
+  case ('meme-2'):
+    secondMeme();
+    break;
+  case ('meme-3'):
+    thirdMeme();
+    break;
+  case ('meme-4'):
+    fourthMeme();
+    break;
+  default:
+    alert('Erro ao selecionar meme!');
   }
 }
 
 function buttonsMeme() {
-  addMultiplesListeners(staticElement.memeTemplates, 'click', applyTemplateMeme)
+  addMultiplesListeners(staticElement.memeTemplates, 'click', applyTemplateMeme);
 }
 
 function startMemes() {
