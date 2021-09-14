@@ -58,8 +58,10 @@ const user = {
 const staticElement = {
   textInput: getOne('#text-input'),
   memeInsert: getOne('#meme-insert'),
+  memeContainer: getOne('#meme-image-container'),
   memeImage: getOne('#meme-image'),
   memeText: getOne('#meme-text'),
+  borderButtons: getAll('.border'),
 }
 
 function saveMemeText(event) {
@@ -77,7 +79,7 @@ function inputMemeAtt() {
   });
 }
 
-/* funções saveMemeImgPath e applyMemeImg foram feitas utilizando estas referências:
+/* As funções saveMemeImgPath e applyMemeImg foram feitas utilizando estas referências:
 https://stackoverflow.com/questions/22087076/how-to-make-a-simple-image-upload-using-javascript-html
 https://github.com/tryber/sd-016-b-project-meme-generator/pull/1/files
 https://developer.mozilla.org/en-US/docs/Web/API/FileList */
@@ -99,9 +101,42 @@ function buttonMemeInput() {
   });
 }
 
+function fireBorder() {
+  staticElement.memeContainer.style.border = '3px dashed red';
+}
+
+function waterBorder() {
+  staticElement.memeContainer.style.border = '5px double blue';
+}
+
+function earthBorder() {
+  staticElement.memeContainer.style.border = '6px groove green';
+}
+
+function applyBorder(event) {
+  switch(event.target.id){
+    case('fire'):
+      fireBorder();
+      break
+    case('water'):
+      waterBorder();
+      break
+    case('earth'):
+      earthBorder();
+      break
+    default:
+      alert('Erro ao selecionar a borda!');
+  }
+}
+
+function buttonsBorder() {
+  addMultiplesListeners(staticElement.borderButtons, 'click', applyBorder)
+}
+
 function startMemes() {
   inputMemeAtt();
   buttonMemeInput();
+  buttonsBorder();
 }
 
 window.onload = () => {
