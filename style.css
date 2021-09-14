@@ -5,19 +5,24 @@
   width: 50px;
   height: 50px;
 }
-.buttons-border-container :nth-child(1) {
+
+.buttons-border-container :nth-child( 1 ) {
   background-color: #f00;
 }
-.buttons-border-container :nth-child(2) {
+
+.buttons-border-container :nth-child( 2 ) {
   background-color: #00f;
 }
-.buttons-border-container :nth-child(3) {
+
+.buttons-border-container :nth-child( 3 ) {
   background-color: #008000;
 }
+
 .container {
   margin: auto;
   width: calc(80% - 80px);
 }
+
 #meme-image-container {
   background-color: #fff;
   border: 1px solid #000;
@@ -25,12 +30,14 @@
   width: 500px;
   height: 500px;
 }
+
 #meme-image {
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
+
 #meme-text {
   bottom: 0;
   color: #fff;
@@ -38,6 +45,7 @@
   position: absolute;
   text-shadow: 5px 5px 5px #000;
 }
+
 .meme-template {
   border: 1px solid #000;
   display: inline-block;
