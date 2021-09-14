@@ -1,38 +1,38 @@
 #create-text {
-    display: block;
+  display: block;
 }
 
 #meme-insert {
-    display: block;
+  display: block;
 }
 
 .border {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 #meme-image-container {
-    align-items: flex-end;
-    background-color: white;
-    display: block;
-    height: 500px;
-    position: relative;
-    justify-content: center;
-    width: 500px;
+  align-items: flex-end;
+  background-color: white;
+  display: block;
+  height: 500px;
+  position: relative;
+  justify-content: center;
+  width: 500px;
 }
 
 #meme-image {
-    height: 500px;
-    width: 500px;
+  height: 500px;
+  width: 500px;
 }
 
 #meme-text {
-    bottom: 0;
-    color: white;
-    font-size: 30px;
-    margin: 20px;
-    position: absolute;
-    text-shadow: 5px 5px 5px black;
-    text-align: center;
+  bottom: 0;
+  color: white;
+  font-size: 30px;
+  margin: 20px;
+  position: absolute;
+  text-shadow: 5px 5px 5px black;
+  text-align: center;
 }
 
 #fire {
@@ -48,22 +48,22 @@
 }
 
 .fire {
-    border: 3px dashed red;
+  border: 3px dashed red;
 }
 
 .water {
-    border: 5px double blue;
+  border: 5px double blue;
 }
 
 .earth {
-    border: 6px groove green;
+  border: 6px groove green;
 }
 
 .ready-images {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 .ready-images:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
