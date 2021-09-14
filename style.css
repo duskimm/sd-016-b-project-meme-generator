@@ -1,11 +1,14 @@
+html {
+    font-family: Roboto, sans-serif;
+}
 #meme-image-container {
     border: 1px black solid;
     max-width: 30%;
     height: 400px;
-    margin-top: 50px;
+    margin-top: 20px;
     position: relative;
     text-align: center;
-    color: white;
+    background-color: white;
 }
 
 #meme-text {
@@ -14,7 +17,7 @@
   font-size: 30px;
   position: absolute;
   z-index: 100;
-  top: 200px;
+  top: 230px;
 }
 
 #meme-image {
