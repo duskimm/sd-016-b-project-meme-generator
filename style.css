@@ -2,3 +2,8 @@
   position: absolute;
   z-index: 1;
 }
+
+#meme-image-container {
+  border: 1px solid black;
+  background-color: white;
+}
