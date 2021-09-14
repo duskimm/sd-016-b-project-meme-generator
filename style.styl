@@ -6,6 +6,11 @@ square-config(w)
   width: w
   height: @width
 
+bg-image-config()
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
 .border
   border: 1px solid black
   display: inline-block
@@ -19,6 +24,20 @@ square-config(w)
     background-color: blue
   :nth-child(3)
     background-color: green
+
+.divs-meme-container
+  :nth-child(1)
+    bg-image-config()
+    background-image url(./imgs/meme-1.png)
+  :nth-child(2)
+    bg-image-config()
+    background-image url(./imgs/meme-2.png)
+  :nth-child(3)
+    bg-image-config()
+    background-image url(./imgs/meme-3.png)
+  :nth-child(4)
+    bg-image-config()
+    background-image url(./imgs/meme-4.png)
 
 .container
   container-generator()
