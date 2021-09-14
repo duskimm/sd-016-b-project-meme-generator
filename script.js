@@ -1,5 +1,7 @@
 const getInputText = document.getElementById('text-input');
 const getInputImage = document.getElementById('meme-insert');
+const getStyleButton = document.getElementById('style-button').children;
+const getContainer = document.getElementById('meme-image-container');
 
 function showingTextInsideDiv() {
   const text = document.getElementById('meme-text');
@@ -14,3 +16,21 @@ function showImage() {
 }
 
 getInputImage.addEventListener('change', showImage);
+
+function styleFire() {
+  getContainer.style.border = '3px dashed red';
+}
+
+getStyleButton[0].addEventListener('click', styleFire);
+
+function styleWater() {
+  getContainer.style.border = '5px double blue';
+}
+
+getStyleButton[1].addEventListener('click', styleWater);
+
+function styleEarth() {
+  getContainer.style.border = '6px groove green';
+}
+
+getStyleButton[2].addEventListener('click', styleEarth);

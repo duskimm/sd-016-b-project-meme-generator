@@ -9,4 +9,18 @@
 #meme-image-container {
   border: 1px solid black;
   background-color: white;
+  width: 350px;
+  height: 250px;
+}
+
+#fire {
+  background-color: red
+}
+
+#water {
+  background-color: blue
+}
+
+#earth {
+  background-color: green
 }
