@@ -6,36 +6,39 @@ const imageInput = document.getElementById('meme-insert');
 const fireButton = document.getElementById('fire');
 const waterButton = document.getElementById('water');
 const earthButton = document.getElementById('earth');
+const memesContainer = document.getElementById('memes-container');
 
 function insertTextMeme() {
-  memeText.innerHTML = inputText.value
+  memeText.innerHTML = inputText.value;
 }
 
 /* O codigo dessa funcao foi retirado do site https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/27165977#27165977
-e tambem https://www.codegrepper.com/code-examples/javascript/how+to+display+uploaded+file+in+html+using+javascript*/
+e tambem https://www.codegrepper.com/code-examples/javascript/how+to+display+uploaded+file+in+html+using+javascript */
 
-function addImageToContainer (event) {
-	imageMeme.src = URL.createObjectURL(event.target.files[0]);
-  /* imageMeme.onload = () => {
-    URL.removeObjectURL(imageMeme.src)
-  } */
+function addImageToContainer(event) {
+  imageMeme.src = URL.createObjectURL(event.target.files[0]);
 }
 
-function boarderFire () {
-  memeContainer.style.border = '3px dashed rgb(255, 0, 0)'
+function boarderFire() {
+  memeContainer.style.border = '3px dashed rgb(255, 0, 0)';
 }
 
-function boarderWater () {
-  memeContainer.style.border = '5px double rgb(0, 0, 255)'
+function boarderWater() {
+  memeContainer.style.border = '5px double rgb(0, 0, 255)';
 }
 
-function boarderEarth () {
-  memeContainer.style.border = '6px groove rgb(0, 128, 0)'
+function boarderEarth() {
+  memeContainer.style.border = '6px groove rgb(0, 128, 0)';
 }
 
-inputText.addEventListener('keyup', insertTextMeme)
-imageInput.addEventListener('change', addImageToContainer)
-fireButton.addEventListener('click', boarderFire)
-waterButton.addEventListener('click', boarderWater)
-earthButton.addEventListener('click', boarderEarth)
+function memesFinished(event) {
+  const memeSRC = event.target.src;
+  imageMeme.src = memeSRC;
+}
 
+inputText.addEventListener('keyup', insertTextMeme);
+imageInput.addEventListener('change', addImageToContainer);
+fireButton.addEventListener('click', boarderFire);
+waterButton.addEventListener('click', boarderWater);
+earthButton.addEventListener('click', boarderEarth);
+memesContainer.addEventListener('click', memesFinished);
