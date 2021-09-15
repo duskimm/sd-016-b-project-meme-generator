@@ -1,0 +1,20 @@
+#meme-image{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+#meme-text{
+    position: absolute;
+    margin: 0 auto;
+    top: 120px;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-size: 30px;
+}
+#meme-image-container{
+    border: 1px solid;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+}
