@@ -69,7 +69,7 @@ body {
 
 .mid-container {
   width: 52rem;
-  margin: 5.8rem auto;
+  margin: 5.8rem auto 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -113,9 +113,34 @@ body {
   width: 30rem;
   height: 40rem;
   border: 1px solid black;
-  margin: 5.8rem auto;
+  margin: 2.2rem auto 2.2rem auto;
   background-color: #fff;
   box-sizing: content-box;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+button {
+  width: 9rem;
+  font-size: 2.2rem;
+  border-radius: 1rem;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
 }
 
 /* #reset-game {
