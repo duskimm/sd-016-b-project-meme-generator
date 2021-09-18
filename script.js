@@ -31,6 +31,21 @@ function border(event) {
   }
 }
 
+function test3() {
+  for (let i = 1; i < 5; i += 1) {
+    let memDivImg = document.querySelector(`#meme-${i}`);
+    memDivImg.style.backgroundImage = `url(./imgs/meme-${i}.png)`;
+  }
+}
+
+function useMeme(e) {
+  const et = e.target;
+  const etBg = et.style.backgroundImage;
+  if (etBg) {
+    document.querySelector('#meme-image').style.backgroundImage = etBg;
+  }
+}
+
 const test = document.querySelector('#meme-insert');
 test.addEventListener('change', memeImg);
 const memeText = document.querySelector('#text-input');
@@ -42,7 +57,13 @@ const greenBtn = document.querySelector('#water');
 greenBtn.addEventListener('click', border);
 const blueBtn = document.querySelector('#earth');
 blueBtn.addEventListener('click', border);
+const imgCon = document.querySelector('.img_container');
+imgCon.addEventListener('click', useMeme);
+
+window.onload = test3;
 // function tstImg(event) {
 //   const image = document.getElementById('output');
 //   image.src = URL.createObjectURL(event.target.files[0]);
 // }
+
+// background-image: url(./imgs/css-logo.png);

@@ -143,6 +143,30 @@ button {
   background-color: green;
 }
 
+.img_container {
+  display: flex;
+  width: 50rem;
+  justify-content: space-between;
+  margin: 5rem auto;
+}
+
+#meme-1,
+#meme-2,
+#meme-3,
+#meme-4 {
+  width: 10rem;
+  height: 15rem;
+  background-position: center;
+  background-size: cover;
+}
+
+#meme-1:hover,
+#meme-2:hover,
+#meme-3:hover,
+#meme-4:hover {
+  cursor: pointer;
+}
+
 /* #reset-game {
   width: 24rem;
   height: 5.8rem;
@@ -185,4 +209,4 @@ button {
 
 .score_cont {
   margin-left: 2rem;
-} */
+} */ ;
