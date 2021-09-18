@@ -95,6 +95,11 @@ body {
   justify-content: center;
 }
 
+#meme-text {
+  font-size: 30px;
+  text-shadow: 5px 5px 5px black;
+  color: white;
+}
 /* #output {
   position: absolute;
   top: 0;
