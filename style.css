@@ -76,6 +76,24 @@ h1 , h2 {
   position: absolute;
 }
 
+#fire {
+  background-color: red;
+  color: white;
+  width: 10%;
+}
+
+#water {
+  background-color: blue;
+  color: white;
+  width: 10%;
+}
+
+#earth {
+  background-color: green;
+  color: white;
+  width: 10%;
+}
+
 #footer {
   margin-top: 30%;
   text-align: center;
