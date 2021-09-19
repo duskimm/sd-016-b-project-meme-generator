@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="text" id="text-input" />
+    <div class="controls">
+      <input type="text" id="text-input" />
+      <input type="file" id="meme-insert" accept="image/*" />
+    </div>
     <div id="meme-image-container">
-      <span id="meme-text"></span>
+      <span id="meme-image"></span>
+      <span id="meme-text" draggable="true"></span>
     </div>
     <script src="script.js"></script>
   </body>
