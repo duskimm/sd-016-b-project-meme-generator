@@ -17,7 +17,6 @@ h1 , h2 {
   background-color: rgb(3 , 107 , 82);
   border-bottom: 7px solid rgb(47 , 193 , 140);
   display: flex;
-  /* margin: -8px -12px 5px; */
 }
 
 #title-container {
@@ -50,23 +49,29 @@ h1 , h2 {
 
  /* *********** */
  
- #meme-image-container {
-   margin: 10% 20%;
-   display: flex;
-   align-items: flex-end;
-   justify-content: center;
+#meme-image-container {
+  border: solid 1px black;
+  background-color: white;
+  margin: 10% 20%;
+  /* width: 200 px; */
+  /* height: 200 px; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#meme-text {
+  position: absolute;
+  z-index: 2;
+  margin-bottom: 5%;
+  /* max-width: 400px; */
   }
   
-  #meme-text {
-    position: absolute;
-    z-index: 2;
-    margin-bottom: 5%;
-    max-width: 400px;
-  }
-  
-  #meme-image {
-    z-index: 1;
-    width: 400px;
+#meme-image {
+  z-index: 1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 #footer {
