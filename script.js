@@ -37,3 +37,24 @@ waterButton.addEventListener('click', () => {
 earthButton.addEventListener('click', () => {
   memeImageContainer.style.border = 'groove 6px green';
 });
+
+const meme1 = document.querySelector('#meme-1');
+const meme2 = document.querySelector('#meme-2');
+const meme3 = document.querySelector('#meme-3');
+const meme4 = document.querySelector('#meme-4');
+
+meme1.addEventListener('click', () => {
+  memeImage.src = meme1.src;
+});
+
+meme2.addEventListener('click', () => {
+  memeImage.src = meme2.src;
+});
+
+meme3.addEventListener('click', () => {
+  memeImage.src = meme3.src;
+});
+
+meme4.addEventListener('click', () => {
+  memeImage.src = meme4.src;
+});
