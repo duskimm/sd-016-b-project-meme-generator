@@ -20,10 +20,10 @@ function pegaURL(event) {
   procuraSRC.src = URL.createObjectURL(event.target.files[0]);
 }
 
-function pegarImg(event) {
-  const evento = event.target.src;
-  recebeImg.src = evento;
-}
+// function pegarImg(event) {
+//   const evento = event.target.src;
+//   recebeImg.src = evento;
+// }
 
 function fire() {
   getDiv.style.border = '3px dashed red';
@@ -49,5 +49,5 @@ imgs();
 getFire.addEventListener('click', fire);
 getWater.addEventListener('click', water);
 getEarth.addEventListener('click', earth);
-recebeImg.addEventListener('click', pegarImg);
+// recebeImg.addEventListener('click', pegarImg);
 recebeImg.addEventListener('change', pegaURL);
