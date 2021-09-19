@@ -9,7 +9,7 @@ inputText.maxLength = '60';
 localImage.appendChild(inputText);
 
 const containerText = document.createElement('div');
-containerText.className = 'container'
+containerText.className = 'container';
 containerText.style.width = '400px';
 containerText.style.height = '400px';
 localImage.appendChild(containerText);
@@ -51,20 +51,22 @@ inputImage.addEventListener('change', () => {
 
 // Requisito 06
 
+const btnStilo = 'btn btn-outline-secondary';
+
 const buttonFire = document.createElement('button');
 buttonFire.id = 'fire';
-buttonFire.className = 'btn btn-outline-secondary';
+buttonFire.className = btnStilo;
 buttonFire.innerText = 'Button Fire';
 localButtons.appendChild(buttonFire);
 
 const buttonWater = document.createElement('button');
-buttonWater.className = 'btn btn-outline-secondary';
+buttonWater.className = btnStilo;
 buttonWater.id = 'water';
 buttonWater.innerText = 'Button Whater';
 localButtons.appendChild(buttonWater);
 
 const buttonEarth = document.createElement('button');
-buttonEarth.className = 'btn btn-outline-secondary';
+buttonEarth.className = btnStilo;
 buttonEarth.id = 'earth';
 buttonEarth.innerText = 'Button Earth';
 localButtons.appendChild(buttonEarth);
