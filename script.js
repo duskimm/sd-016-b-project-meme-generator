@@ -1,13 +1,12 @@
-
-let textInput = document.querySelector('#text-input');
-let memeText = document.querySelector('#meme-text');
-let memeInsert = document.querySelector('#meme-insert');
-let memeImage = document.querySelector('#meme-image');
+const textInput = document.querySelector('#text-input');
+const memeText = document.querySelector('#meme-text');
+const memeInsert = document.querySelector('#meme-insert');
+const memeImage = document.querySelector('#meme-image');
 
 textInput.addEventListener('input', () => {
   memeText.innerText = textInput.value;
   console.log(textInput.value);
-})
+});
 
 const fileReader = new FileReader();
 
@@ -16,7 +15,7 @@ function src() {
 }
 
 memeInsert.addEventListener('change', () => {
-  let file = memeInsert.files[0];
+  const file = memeInsert.files[0];
   fileReader.onload = src;
   fileReader.readAsDataURL(file);
 });

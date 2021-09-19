@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -26,7 +26,6 @@ h1 , h2 {
 #nav-container {
   margin-left: auto;
   margin-right: 7%;
-  
 }
 
 #title {
@@ -47,35 +46,34 @@ h1 , h2 {
   text-decoration: none;
 }
 
- /* *********** */
- 
 #meme-image-container {
   border: solid 1px black;
   background-color: white;
   margin: 10% 20%;
-  width: 100 px;
-  height: 100 px;
+  min-width: 500px;
+  min-height: 500px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
+  position: relative;
+  background-size: contain;
 
 }
 
 #meme-text {
-  position: absolute;
-  z-index: 2;
-  margin: auto 25% 5%;
+  text-align: center;
   font-size: 30px;
   color: white;
-  text-shadow: 5px 5px 5px;
+  text-shadow: 5px 5px 5px black;
+  z-index: 2;
 }
-  
+
 #meme-image {
   z-index: 1;
   background-size: cover;
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 #footer {
