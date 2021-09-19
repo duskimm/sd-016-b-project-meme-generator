@@ -53,19 +53,23 @@ h1 , h2 {
   border: solid 1px black;
   background-color: white;
   margin: 10% 20%;
-  /* width: 200 px; */
-  /* height: 200 px; */
+  width: 100 px;
+  height: 100 px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  overflow: hidden;
+
 }
 
 #meme-text {
   position: absolute;
   z-index: 2;
-  margin-bottom: 5%;
-  /* max-width: 400px; */
-  }
+  margin: auto 25% 5%;
+  font-size: 30px;
+  color: white;
+  text-shadow: 5px 5px 5px;
+}
   
 #meme-image {
   z-index: 1;
