@@ -54,12 +54,3 @@ const blueBtn = document.querySelector('#earth');
 blueBtn.addEventListener('click', border);
 const imgCon = document.querySelector('.img_container');
 imgCon.addEventListener('click', useMeme);
-
-// window.onload = test3;
-// function tstImg(event) {
-//   const image = document.getElementById('output');
-//   image.src = URL.createObjectURL(event.target.files[0]);
-// }
-
-// background-image: url(./imgs/css-logo.png);
-// ./imgs/meme-1.png
