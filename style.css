@@ -1,11 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.title-container h1 {
+  font-size: 45px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.input-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-text-container label {
+  margin-right: 5px;
+  font-size: 25px;
+}
+
+#text-input {
+  margin-right: 20px;
+  width: 40%;
+  padding: 10px;
+}
+
+#meme-insert {
+  font-size: 20px;
+}
+
 #meme-image-container {
+  display: flex;
+  justify-content: center;
   position: relative;
   text-align: center;
   background-color: white;
   border: 1px solid black;
-  max-width: 50%;
+  width: 50%;
   height: 400px;
-  margin-top: 5px;
+  margin: auto;
 }
 
 #meme-image {
@@ -26,6 +73,31 @@
   left: 5px;
 }
 
+.sub-title {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  margin: 15px 0;
+}
+
+#meme-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#meme-options button {
+  padding: 10px;
+  width: 30%;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+#meme-options button:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
 #fire {
   background-color: red;
 }
@@ -38,7 +110,43 @@
   background-color: green;
 }
 
+.imgs img {
+  margin: 0 10px;
+  border: 1px solid black;
+}
+
 #memes-container img {
   height: 150px;
   width: 150px;
 }
+
+.imgs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.imgs:hover {
+  cursor: pointer;
+}
+
+.text-config {
+  margin-bottom: 25px;
+}
+
+.text-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-position input {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.text-position label {
+  margin-left: 10px;
+  font-size: 25px;
+}
+

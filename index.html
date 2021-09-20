@@ -15,23 +15,43 @@
   </header>
   <main>
     <section class="input-text-container">
+      <label for="text-input">Insira a frase do meme: </label>
       <input type="text" id="text-input" maxlength="60">
       <input type="file" name="arquivos" id="meme-insert"  accept="image/png, image/jpeg" /> 
+    </section>
+    <section class="text-config">
+      <div class="sub-title">
+        <h2>Posicionamento do Texto</h2>
+      </div>
+      <div class="text-position">
+        <label for="topText">Altura do Topo: </label>
+        <input type="number" id="topText">
+        <label for="leftText">Distancia do lado Esquerdo: </label>
+        <input type="number" id="leftText">
+      </div>
     </section>
     <section id="meme-image-container">
       <img src="" alt="" id="meme-image">
       <p id="meme-text"></p>
     </section>
     <section id="meme-options">
+      <div class="sub-title">
+        <h2>Bordas</h2>
+      </div>
       <button id="fire">Fire</button>
       <button id="water">Water</button>
       <button id="earth">Earth</button>
     </section>
     <section id="memes-container">
-      <img src="./imgs/meme1.png" alt="" id="meme-1">
-      <img src="./imgs/meme2.png" alt="" id="meme-2">
-      <img src="./imgs/meme3.png" alt="" id="meme-3">
-      <img src="./imgs/meme4.png" alt="" id="meme-4">
+      <div class="sub-title">
+        <h2>Memes Pre-Fabricados</h2>
+      </div>
+      <div class="imgs">
+        <img src="./imgs/meme1.png" alt="" id="meme-1">
+        <img src="./imgs/meme2.png" alt="" id="meme-2">
+        <img src="./imgs/meme3.png" alt="" id="meme-3">
+        <img src="./imgs/meme4.png" alt="" id="meme-4">
+      </div>
     </section>
   </main>
   <script src="./script.js"></script>

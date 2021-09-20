@@ -7,6 +7,8 @@ const fireButton = document.getElementById('fire');
 const waterButton = document.getElementById('water');
 const earthButton = document.getElementById('earth');
 const memesContainer = document.getElementById('memes-container');
+const textTop = document.getElementById('topText');
+const leftText = document.getElementById('leftText');
 
 function insertTextMeme() {
   memeText.innerHTML = inputText.value;
@@ -36,9 +38,29 @@ function memesFinished(event) {
   imageMeme.src = memeSRC;
 }
 
+function changeTopDistance() {
+  const inputValue = textTop.value;
+  memeText.style.top = `${inputValue}px`;
+  if (parseInt(inputValue, 10) > 360) {
+    memeText.style.top = '360px';
+    textTop.value = '360';
+  }
+}
+
+function changeLeftDistance() {
+  const inputValue = leftText.value;
+  memeText.style.left = `${inputValue}px`;
+  if (parseInt(inputValue, 10) > 795) {
+    memeText.style.top = '795px';
+    leftText.value = '795';
+  }
+}
+
 inputText.addEventListener('keyup', insertTextMeme);
 imageInput.addEventListener('change', addImageToContainer);
 fireButton.addEventListener('click', boarderFire);
 waterButton.addEventListener('click', boarderWater);
 earthButton.addEventListener('click', boarderEarth);
 memesContainer.addEventListener('click', memesFinished);
+textTop.addEventListener('change', changeTopDistance);
+leftText.addEventListener('change', changeLeftDistance);
