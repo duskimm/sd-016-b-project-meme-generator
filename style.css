@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,7 @@ header {
 
 .title-container h1 {
   font-size: 45px;
+  font-family: Montserrat, sans-serif;
 }
 
 main {
@@ -29,6 +32,7 @@ main {
 }
 
 .input-text-container label {
+  font-family: Montserrat, sans-serif;
   margin-right: 5px;
   font-size: 25px;
 }
@@ -78,6 +82,7 @@ main {
   justify-content: center;
   font-size: 23px;
   margin: 15px 0;
+  font-family: Montserrat, sans-serif;
 }
 
 #meme-options {
@@ -87,10 +92,13 @@ main {
 }
 
 #meme-options button {
+  font-family: Montserrat, sans-serif;
   padding: 10px;
   width: 30%;
   margin: 5px 0;
   transition: all 0.3s ease;
+  font-size: 23px;
+  color: white;
 }
 
 #meme-options button:hover {
