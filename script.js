@@ -1,5 +1,3 @@
-let uploadedImg = '';
-
 function memeTxt() {
   const memeText = document.querySelector('#text-input');
   const memT = memeText.value;
@@ -7,16 +5,12 @@ function memeTxt() {
   memeTx.innerText = memT;
 }
 
-function memeImg() {
-  const reader = new FileReader();
-  reader.addEventListener('load', () => {
-    uploadedImg = reader.result;
-    document.querySelector(
-      '#meme-image'
-    ).style.backgroundImage = `url(${uploadedImg})`;
-  });
-  reader.readAsDataURL(this.files[0]);
+function memeImg(event) {
+  const imageSrc = URL.createObjectURL(event.target.files[0]);
+  const memImage = document.querySelector('#meme-image');
+  memImage.src = `${imageSrc}`;
 }
+
 function border(event) {
   const meDiv = document.querySelector('.meme_container');
   const eTar = event.target;
@@ -31,18 +25,19 @@ function border(event) {
   }
 }
 
-function test3() {
-  for (let i = 1; i < 5; i += 1) {
-    let memDivImg = document.querySelector(`#meme-${i}`);
-    memDivImg.style.backgroundImage = `url(./imgs/meme-${i}.png)`;
-  }
-}
+// function test3() {
+//   for (let i = 1; i < 5; i += 1) {
+//     const memDivImg = document.querySelector(`#meme-${i}`);
+//     memDivImg.style.backgroundImage = `url(./imgs/meme-${i}.png)`;
+//   }
+// }
 
 function useMeme(e) {
   const et = e.target;
-  const etBg = et.style.backgroundImage;
+  const etBg = et.src;
+  console.log(etBg);
   if (etBg) {
-    document.querySelector('#meme-image').style.backgroundImage = etBg;
+    document.querySelector('#meme-image').src = `${etBg}`;
   }
 }
 
@@ -60,10 +55,11 @@ blueBtn.addEventListener('click', border);
 const imgCon = document.querySelector('.img_container');
 imgCon.addEventListener('click', useMeme);
 
-window.onload = test3;
+// window.onload = test3;
 // function tstImg(event) {
 //   const image = document.getElementById('output');
 //   image.src = URL.createObjectURL(event.target.files[0]);
 // }
 
 // background-image: url(./imgs/css-logo.png);
+// ./imgs/meme-1.png

@@ -6,17 +6,17 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Ubuntu';
+  font-family: Ubuntu, sans-serif;
 }
 
 body {
   font-size: 2.4rem;
-  background-color: #e3f3ed;
+  background-color: rgb(227 , 243 , 237);
 }
 
 .header_gen {
   width: 100%;
-  background-color: #104230;
+  background-color: rgb(16 , 66 , 48);
 }
 
 .header_content {
@@ -28,10 +28,10 @@ body {
 }
 
 .header_title {
-  color: #e4ebe9;
+  color: rgb(228 , 235 , 233);
   font-size: 5.8rem;
   letter-spacing: 5px;
-  font-family: 'Bangers', cursive;
+  font-family: Bangers, cursive;
 }
 
 .header-img {
@@ -42,18 +42,19 @@ body {
   width: 7rem;
   text-align: center;
 }
+
 .container {
   width: 104rem;
-  margin: 2.2rem auto 0 auto;
+  margin: 2.2rem auto 0;
 }
 
 .header_h3 {
-  color: #47d4ac;
+  color: rgb(71 , 212 , 172);
   font-size: 1.8rem;
 }
 
 .header_h2 {
-  color: rgb(36, 66, 55);
+  color: rgb(36 , 66 , 55);
   font-size: 3.6rem;
   text-align: center;
 }
@@ -69,7 +70,7 @@ body {
 
 .mid-container {
   width: 52rem;
-  margin: 5.8rem auto 0 auto;
+  margin: 5.8rem auto 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -86,35 +87,30 @@ body {
 }
 
 #meme-image {
-  background-size: cover;
   width: 30rem;
   height: 40rem;
-  background-position: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: absolute;
+  z-index: 10;
 }
 
 #meme-text {
   font-size: 30px;
   text-shadow: 5px 5px 5px black;
   color: white;
-}
-/* #output {
+  z-index: 300000;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 30rem;
-  height: 40rem;
-  z-index: 1;
-} */
+}
 
 .meme_container {
   width: 30rem;
   height: 40rem;
   border: 1px solid black;
-  margin: 2.2rem auto 2.2rem auto;
-  background-color: #fff;
+  margin: 2.2rem auto;
+  background-color: white;
   box-sizing: content-box;
 }
 
@@ -150,63 +146,13 @@ button {
   margin: 5rem auto;
 }
 
-#meme-1,
-#meme-2,
-#meme-3,
-#meme-4 {
+#meme-1 , #meme-2 , #meme-3 , #meme-4 {
   width: 10rem;
   height: 15rem;
   background-position: center;
   background-size: cover;
 }
 
-#meme-1:hover,
-#meme-2:hover,
-#meme-3:hover,
-#meme-4:hover {
+#meme-1:hover , #meme-2:hover , #meme-3:hover , #meme-4:hover {
   cursor: pointer;
 }
-
-/* #reset-game {
-  width: 24rem;
-  height: 5.8rem;
-  font-size: 2.2rem;
-  border-radius: 2.2rem;
-  background-color: #6eccaa;
-  border: none;
-  box-shadow: 5px 5px 15px rgba(2, 46, 30, 0.507);
-}
-
-#reset-game:hover {
-  cursor: pointer;
-  background-color: #228f67;
-  color: #95ebca;
-}
-
-#reset-game:active {
-  box-shadow: 3px 3px 2px rgba(2, 46, 30, 0.637);
-} */
-
-/* .score_content {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  align-items: center;
-} */
-/* 
-#score {
-  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.582);
-  display: flex;
-  width: 10rem;
-  background-color: rgb(240, 130, 130);
-  height: 15rem;
-  align-items: center;
-  justify-content: center;
-  font-size: 10rem;
-  font-family: 'Bangers', cursive;
-  color: #062c1e;
-}
-
-.score_cont {
-  margin-left: 2rem;
-} */ ;
