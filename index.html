@@ -10,27 +10,47 @@
 </head>
 <body>
 
+    <header>
+        <h1>Meme Generator</h1>
+        <h2>Gerador de memes personalizados</h2>
+    </header>
+
     <main>
-        <textarea name="" id="text-input" cols="20" rows="2" maxlength="60"></textarea>
-        <input type="file" id="meme-insert" accept="image/*">
+        <section class="container">
+            <div class="legend-container">
+                <p>Insira a legenda:</p>
+                <textarea name="" id="text-input" cols="20" rows="2" maxlength="60"></textarea>
+            </div>
+            <input type="file" id="meme-insert" accept="image/*">
 
-        <div id="meme-image-container" class="border">
-            <div id="meme-text"></div>
-            <img id="meme-image" src="">
-        </div>
+            <div id="meme-image-container" class="border">
+                <div id="meme-text"></div>
+                <img id="meme-image" src="">
+            </div>
 
-        <button id="fire">Fire</button>
-        <button id="water">Water</button>
-        <button id="earth">Earth</button>
+            <div class="border-container">
+                <p>Escolha o estilo da borda:</p>
+                <div class="btn">
+                    <button id="fire">Fire</button>
+                    <button id="water">Water</button>
+                    <button id="earth">Earth</button>
+                </div>
+            </div>
 
-        <div>
-            <h1>Escolha seu meme</h1>
-            <img id="meme-1" class="ready-images" src="imgs/meme1.png">
-            <img id="meme-2" class="ready-images" src="imgs/meme2.png">
-            <img id="meme-3" class="ready-images" src="imgs/meme3.png">
-            <img id="meme-4" class="ready-images" src="imgs/meme4.png">
-        </div>
+
+            <div class="ready-container">
+                <p>Não sabe qual imagem escolher? Escolha o seu meme:</p>
+                <div class="ready-images-container">
+                    <img id="meme-1" class="ready-images" src="imgs/meme1.png">
+                    <img id="meme-2" class="ready-images" src="imgs/meme2.png">
+                    <img id="meme-3" class="ready-images" src="imgs/meme3.png">
+                    <img id="meme-4" class="ready-images" src="imgs/meme4.png">
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>Desenvolvido por <em><a href="https://julianesilvac75.github.io/"> Juliane Cardoso</a></em> &#128156;</footer>
     
     <script src="script.js"></script>
 </body>

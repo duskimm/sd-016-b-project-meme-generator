@@ -1,9 +1,17 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
 #create-text {
   display: block;
 }
 
 #meme-insert {
   display: block;
+  margin-bottom: 20px;
 }
 
 .border {
@@ -11,9 +19,10 @@
 }
 
 #meme-image-container {
-  align-items: flex-end;
+  align-items: center;
   background-color: white;
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 500px;
   position: relative;
   justify-content: center;
@@ -36,15 +45,23 @@
 }
 
 #fire {
+  border: 1px solid red;
   background-color: red;
 }
 
 #water {
+  border: 1px solid blue;
   background-color: blue;
 }
 
 #earth {
+  border: 1px solid green;
   background-color: green;
+}
+
+#fire:hover , #water:hover , #earth:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 .fire {
@@ -61,9 +78,103 @@
 
 .ready-images {
   height: 100px;
+  margin: 5px;
   width: 100px;
 }
 
 .ready-images:hover {
   cursor: pointer;
+  height: 110px;
+  width: 110px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-width: 730px;
+}
+
+header {
+  background-color: rgb(161, 255, 10);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: 250;
+}
+
+main {
+  background-color: rgb(10, 255, 153);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 70%;
+}
+
+.legend-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.legend-container p {
+  margin: 10px 0;
+}
+
+.legend-container textarea {
+  border: 1px solid black;
+}
+
+.border-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.btn {
+  margin: 10px 0;
+}
+
+.btn button {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.ready-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ready-images-container {
+  align-items: center;
+  display: flex;
+  height: 130px;
+  justify-content: center;
+  margin: 15px 0;
+  width: 500px;
+}
+
+footer {
+  background-color: rgb(161, 255, 10);
+  font-size: 0.8em;
+  padding: 18px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
