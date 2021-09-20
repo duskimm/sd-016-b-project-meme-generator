@@ -2,7 +2,6 @@
   border: 0;
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 #create-text {
@@ -94,7 +93,7 @@ body {
 }
 
 header {
-  background-color: rgb(161, 255, 10);
+  background-color: rgb(161 , 255 , 10);
   padding: 20px;
   text-align: center;
 }
@@ -109,7 +108,7 @@ header h2 {
 }
 
 main {
-  background-color: rgb(10, 255, 153);
+  background-color: rgb(10 , 255 , 153);
   display: flex;
   justify-content: center;
 }
@@ -129,6 +128,7 @@ main {
   flex-direction: column;
   margin: 20px 0;
 }
+
 .legend-container p {
   margin: 10px 0;
 }
@@ -169,7 +169,7 @@ main {
 }
 
 footer {
-  background-color: rgb(161, 255, 10);
+  background-color: rgb(161 , 255 , 10);
   font-size: 0.8em;
   padding: 18px;
   text-align: center;
