@@ -12,7 +12,7 @@ function memeText() {
   const texto = document.getElementById('meme-text');
   texto.innerText = textInput;
 }
-textInput2.addEventListener('change', memeText);
+textInput2.addEventListener('keyup', memeText);
 
 // Função para alterar a imagem.
 function searchImg(event) {
@@ -22,7 +22,6 @@ function searchImg(event) {
 const imgInsert = document.getElementById('meme-insert');
 
 imgInsert.addEventListener('change', searchImg);
-
 
 // function createButton() {
 //   const button = document.createElement('button');

@@ -9,9 +9,11 @@
 </head>
 <body>
   <input type="file" accept=".jpg,.gif,.png" id="meme-insert" placeholder="Insira sua imagem">
-  <input type="text" id="text-input" placeholder="Insira seu texto aqui">
+  <input type="text" id="text-input" placeholder="Insira seu texto aqui" maxlength="60">
   <div id="meme-image-container">
-    <p id="meme-text"></p>
+    <div id="container-text">
+      <p id="meme-text"></p>
+    </div>
     <div id="container-image">
       <img src="" alt="" id="meme-image">
     </div>
