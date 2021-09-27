@@ -1,15 +1,16 @@
-function updateContainerSize() {
-  const container = document.getElementById('meme-image-container');
+const container = document.getElementById('meme-image-container');
+
+function updateContainerSize(borderWidth = 1) {
   const memeImage = document.getElementById('meme-image');
   const memeText = document.getElementById('meme-text');
   if (memeImage.src !== '') {
     memeImage.width = memeImage.naturalWidth;
     memeImage.height = memeImage.naturalHeight;
-    container.style.width = `${memeImage.naturalWidth + 2}px`;
-    container.style.height = `${memeImage.naturalHeight + 2}px`;
+    container.style.width = `${memeImage.naturalWidth + (borderWidth * 2)}px`;
+    container.style.height = `${memeImage.naturalHeight + (borderWidth * 2)}px`;
   } else if (memeText.innerText !== '') {
-    container.style.width = `${memeText.clientWidth + 2}px`;
-    container.style.height = `${memeText.clientHeight + 2}px`;
+    container.style.width = `${memeText.clientWidth + (borderWidth * 2)}px`;
+    container.style.height = `${memeText.clientHeight + (borderWidth * 2)}px`;
   }
   memeText.style.top = 0;
   memeText.style.left = 0;
@@ -24,11 +25,11 @@ function updateMemeText(evt) {
 function addTextInputEvents() {
   const textInput = document.getElementById('text-input');
   textInput.addEventListener('input', updateMemeText);
-  textInput.addEventListener('input', updateContainerSize);
+  textInput.addEventListener('input', () => updateContainerSize());
 }
 
 function addImageEvents(image) {
-  image.addEventListener('load', updateContainerSize);
+  image.addEventListener('load', () => updateContainerSize());
   image.addEventListener('load', () => {
     URL.revokeObjectURL(image.src);
   });
@@ -51,7 +52,7 @@ function clampVal(min, val, max) {
   return val - min;
 }
 
-function calculateNewTop(y, text, container) {
+function calculateNewTop(y, text) {
   const maxY = container.offsetHeight;
   const offsetY = container.offsetTop;
   const textHeight = parseFloat(window.getComputedStyle(text).getPropertyValue('height'));
@@ -59,7 +60,7 @@ function calculateNewTop(y, text, container) {
   const newTop = clampVal(offsetY, y, max);
   return `${newTop}px`;
 }
-function calculateNewLeft(x, text, container) {
+function calculateNewLeft(x, text) {
   const maxX = container.offsetWidth;
   const offsetX = container.offsetLeft;
   const textWidth = parseFloat(window.getComputedStyle(text).getPropertyValue('width'));
@@ -70,10 +71,9 @@ function calculateNewLeft(x, text, container) {
 
 function moveText(evt) {
   evt.preventDefault();
-  const container = document.getElementById('meme-image-container');
   const text = document.getElementById('meme-text');
-  text.style.top = calculateNewTop(evt.y, text, container);
-  text.style.left = calculateNewLeft(evt.x, text, container);
+  text.style.top = calculateNewTop(evt.y, text);
+  text.style.left = calculateNewLeft(evt.x, text);
   text.style.transform = 'none';
   text.style.opacity = 1;
 }
@@ -87,10 +87,37 @@ function addTextEvents() {
   memeText.addEventListener('dragend', moveText, false);
 }
 
+function addBorder(evt) {
+  const border = window.getComputedStyle(evt.currentTarget).getPropertyValue('outline');
+  container.style.border = border;
+  const borderWidth = border.match(/\d+(?=px)/)[0];
+  updateContainerSize(borderWidth);
+}
+
+function addFireBorderButtonEvent() {
+  const fire = document.getElementById('fire');
+  fire.addEventListener('click', addBorder);
+}
+function addWaterBorderButtonEvent() {
+  const water = document.getElementById('water');
+  water.addEventListener('click', addBorder);
+}
+function addEarthBorderButtonEvent() {
+  const earth = document.getElementById('earth');
+  earth.addEventListener('click', addBorder);
+}
+
+function addBorderButtonsEvents() {
+  addFireBorderButtonEvent();
+  addWaterBorderButtonEvent();
+  addEarthBorderButtonEvent();
+}
+
 function addInputEvents() {
   addTextInputEvents();
   addImageInputEvents();
   addTextEvents();
+  addBorderButtonsEvents();
 }
 
 window.onload = () => {

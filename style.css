@@ -30,3 +30,39 @@ body {
   text-align: center;
   width: max-content;
 }
+
+#fire {
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  outline: 3px dashed red;
+  outline-offset: 3px;
+}
+
+#water {
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: blue;
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  outline: 5px double blue;
+  outline-offset: 3px;
+}
+
+#earth {
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: green;
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  outline: 6px groove green;
+  outline-offset: 3px;
+}
