@@ -24,8 +24,8 @@ body {
   left: 0;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0 0 10px black;
-  font-size: xx-large;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
   font-family: fantasy;
   text-align: center;
   width: max-content;
