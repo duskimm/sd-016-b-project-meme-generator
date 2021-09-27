@@ -1,7 +1,8 @@
 const container = document.getElementById('meme-image-container');
+const memeImage = document.getElementById('meme-image');
+let borderWidth = 1;
 
-function updateContainerSize(borderWidth = 1) {
-  const memeImage = document.getElementById('meme-image');
+function updateContainerSize() {
   const memeText = document.getElementById('meme-text');
   if (memeImage.src !== '') {
     memeImage.width = memeImage.naturalWidth;
@@ -36,7 +37,6 @@ function addImageEvents(image) {
 }
 
 function updateMemeImage(evt) {
-  const memeImage = document.getElementById('meme-image');
   memeImage.src = URL.createObjectURL(evt.target.files[0]);
   addImageEvents(memeImage);
 }
@@ -90,8 +90,8 @@ function addTextEvents() {
 function addBorder(evt) {
   const border = window.getComputedStyle(evt.currentTarget).getPropertyValue('outline');
   container.style.border = border;
-  const borderWidth = border.match(/\d+(?=px)/)[0];
-  updateContainerSize(borderWidth);
+  [borderWidth] = border.match(/\d+(?=px)/);
+  updateContainerSize();
 }
 
 function addFireBorderButtonEvent() {
@@ -113,11 +113,24 @@ function addBorderButtonsEvents() {
   addEarthBorderButtonEvent();
 }
 
+function addPrebuiltMeme(evt) {
+  memeImage.src = evt.target.src;
+  addImageEvents(memeImage);
+}
+
+function addPrebuiltMemeEvents() {
+  const prebuiltMemes = document.querySelectorAll('.prebuilt-meme');
+  Array.from(prebuiltMemes).forEach((meme) => {
+    meme.addEventListener('click', addPrebuiltMeme);
+  });
+}
+
 function addInputEvents() {
   addTextInputEvents();
   addImageInputEvents();
   addTextEvents();
   addBorderButtonsEvents();
+  addPrebuiltMemeEvents();
 }
 
 window.onload = () => {
