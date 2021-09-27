@@ -13,18 +13,9 @@ body {
 }
 
 #meme-image-container {
-  background-color: lightgray;
-  display: inline-block;
+  background-color: white;
+  border: 1px solid black;
   position: relative;
-  margin: 0 auto;
-  min-width: 50px;
-  min-height: 50px;
-}
-
-#meme-image {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 #meme-text {
@@ -37,4 +28,5 @@ body {
   font-size: xx-large;
   font-family: fantasy;
   text-align: center;
+  width: max-content;
 }

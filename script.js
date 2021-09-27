@@ -1,3 +1,21 @@
+function updateContainerSize() {
+  const container = document.getElementById('meme-image-container');
+  const memeImage = document.getElementById('meme-image');
+  const memeText = document.getElementById('meme-text');
+  if (memeImage.src !== '') {
+    memeImage.width = memeImage.naturalWidth;
+    memeImage.height = memeImage.naturalHeight;
+    container.style.width = `${memeImage.naturalWidth + 2}px`;
+    container.style.height = `${memeImage.naturalHeight + 2}px`;
+  } else if (memeText.innerText !== '') {
+    container.style.width = `${memeText.clientWidth + 2}px`;
+    container.style.height = `${memeText.clientHeight + 2}px`;
+  }
+  memeText.style.top = 0;
+  memeText.style.left = 0;
+  memeText.style.transform = 'none';
+}
+
 function updateMemeText(evt) {
   const memeText = document.getElementById('meme-text');
   memeText.innerText = evt.target.value;
@@ -6,32 +24,20 @@ function updateMemeText(evt) {
 function addTextInputEvents() {
   const textInput = document.getElementById('text-input');
   textInput.addEventListener('input', updateMemeText);
+  textInput.addEventListener('input', updateContainerSize);
 }
 
-function imageLoadedCallback(img) {
-  const container = document.getElementById('meme-image-container');
-  container.style.width = `${img.width}px`;
-  container.style.height = `${img.height}px`;
-  const text = document.getElementById('meme-text');
-  text.style.top = 0;
-  text.style.left = 0;
-  text.style.transform = 'none';
+function addImageEvents(image) {
+  image.addEventListener('load', updateContainerSize);
+  image.addEventListener('load', () => {
+    URL.revokeObjectURL(image.src);
+  });
 }
 
 function updateMemeImage(evt) {
   const memeImage = document.getElementById('meme-image');
-  memeImage.innerHTML = '';
-  const img = document.createElement('img');
-  img.onload = () => imageLoadedCallback(img);
-  const [file] = evt.target.files;
-  const reader = new FileReader();
-  reader.onload = (readerEvt) => {
-    img.src = readerEvt.target.result;
-    img.draggable = false;
-  };
-  img.file = file;
-  reader.readAsDataURL(file);
-  memeImage.appendChild(img);
+  memeImage.src = URL.createObjectURL(evt.target.files[0]);
+  addImageEvents(memeImage);
 }
 
 function addImageInputEvents() {
