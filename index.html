@@ -10,7 +10,7 @@
 <body>
   <h1>Meme Generator</h1>
   <span>Texto:</span><input type="text" maxlength="60" id="text-input"><br>
-  <span>Foto:</span><button id="meme-insert">Choose File</button><span id="nomeArquivo">Nenhum arquivo</span><br>  
+  <span>Foto:</span><input type="file" name="" id="meme-insert">
   <div id='meme-image-container'><h1 id="meme-text"></h1></div>
   <br>
   <button id="fire">Fire</button>  
@@ -25,5 +25,6 @@
 </body>
 <script src="/script.js"></script>
 </html>
+
 
 <!-- Não esquecendo da linha no fim do arquivo pra agradar o linter -->
