@@ -3,9 +3,6 @@
   width: 500px;
   background-color: white;
 }
-.container {
-  /* border: 1px solid black; */
-}
 
 #text-input {
   margin-bottom: 10px;
@@ -18,30 +15,35 @@
 
 #meme-text {
   position: absolute;
-  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
+  text-shadow: black 5px 5px 5px;
   font-size: 30px;
   color: white;
 }
+
 .fire {
   border: 3px dashed red;
 }
+
 .water {
   border: 5px double blue;
-
 }
+
 .earth {
   border: 6px groove green;
+}
 
-}
 #fire {
-  background-color: rgb(255, 0, 0);
+  background-color: red;
 }
+
 #water {
-  background-color: rgb(0, 0, 255);
+  background-color: blue;
 }
+
 #earth {
-  background-color: rgb(0, 128, 0);
+  background-color: green;
 }
+
 .imagepronta {
   width: 100px;
   height: 100px;
