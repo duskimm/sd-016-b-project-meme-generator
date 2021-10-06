@@ -12,11 +12,25 @@
     <h1>Meme Generator</h1>
   </header>
   <div> 
-    <input type="text" id="text-input">
+    <input type="text" id="text-input" maxlength= '60'>
   </div>
-  <div></div>
-  <div id="meme-image-container">
+  <div> 
+    <input type="file" id="meme-insert">
+  </div>
+  <div id="meme-image-container" class="container">
     <p id="meme-text"></p>
+    <img src="" alt="" id="meme-image">
+  </div>
+  <div>
+    <button id="fire"></button>
+    <button id="water"></button>
+    <button id="earth"></button>
+  </div>
+  <div id="divPai">
+    <img src="./imgs/meme1.png" id="meme-1" class="imagepronta" alt="">
+    <img src="./imgs/meme2.png" id="meme-2" class="imagepronta" alt="">
+    <img src="./imgs/meme3.png" id="meme-3" class="imagepronta" alt="">
+    <img src="./imgs/meme4.png" id="meme-4" class="imagepronta" alt="">
   </div>
   
   <script src="script.js"></script>
