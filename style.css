@@ -45,11 +45,3 @@ h1 {
 #sample-images img {
   width: 100px;
 }
-
-#sample-images img:hover {
-  border: 2px solid red;
-
-#text-input {
-  margin-bottom: 20px;
-}
-
