@@ -6,10 +6,7 @@ const memeImage = document.querySelector('#meme-image');
 const buttonFire = document.querySelector('#fire');
 const buttonWater = document.querySelector('#water');
 const butttonEarth = document.querySelector('#earth');
-const Meme1 = document.querySelector('#meme-1');
-const Meme2 = document.querySelector('#meme-2');
-const Meme3 = document.querySelector('#meme-3');
-const Meme4 = document.querySelector('#meme-4');
+const allMemes = document.querySelector('#sample-images');
 
 function inputText() {
   const text = textInput.value;
@@ -44,3 +41,10 @@ buttonWater.addEventListener('click', borderElement);
 butttonEarth.addEventListener('click', borderElement);
 
 // fonte sobre bordas css- https://br.godaddy.com/blog/border-css-estilos-de-borda-para-usar-no-seu-site/
+
+allMemes.addEventListener('click', (evt) => {
+  const event = evt.target;
+  if (event.src !== undefined) {
+    memeImage.src = event.src;
+  }
+});
