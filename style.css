@@ -2,4 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-left: 20px;
+}
+
+h1 {
+  display: flex;
+  padding: 20px;
+}
+
+#meme-image-container {
+  border: 1px solid black;
+  display: flex;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+}
+
+#text-input {
+  margin-bottom: 20px;
 }
