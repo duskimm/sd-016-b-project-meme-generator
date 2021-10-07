@@ -30,13 +30,13 @@ imgInput.addEventListener('change', addImage);
 function borderElement(buttonElement) {
   const button = buttonElement.target;
   if (button === buttonFire) {
-    memeContainer.style.border = '20px ridge red';
+    memeContainer.style.border = '3px dashed red';
   }
   if (button === buttonWater) {
-    memeContainer.style.border = '15px  double blue';
+    memeContainer.style.border = '5px  double blue';
   }
   if (button === butttonEarth) {
-    memeContainer.style.border = '17px groove green';
+    memeContainer.style.border = '6px groove green';
   }
 }
 
