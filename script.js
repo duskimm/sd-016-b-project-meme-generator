@@ -18,14 +18,13 @@ function inputText() {
 
 textInput.addEventListener('keyup', inputText);
 
-function addImage(img) {
-  const imgUrl = URL.createObjectURL(img.target.files[0]);
-  memeContainer.style.width = '500px';
-  memeContainer.style.height = '500px';
-  memeImage.src = imgUrl;
+function addImage() {
+  imgInput.addEventListener('change', (event) => {
+    memeImage.src = URL.createObjectURL(event.target.files[0]);
+  });
 }
 
-imgInput.addEventListener('change', addImage);
+addImage();
 
 function borderElement(buttonElement) {
   const button = buttonElement.target;
@@ -45,4 +44,3 @@ buttonWater.addEventListener('click', borderElement);
 butttonEarth.addEventListener('click', borderElement);
 
 // fonte sobre bordas css- https://br.godaddy.com/blog/border-css-estilos-de-borda-para-usar-no-seu-site/
-

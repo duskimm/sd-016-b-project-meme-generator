@@ -35,6 +35,10 @@ h1 {
   margin-top: 10px;
 }
 
+#meme-image {
+  width: 80%;
+}
+
 #meme-text {
   position: absolute;
   text-shadow: 5px 5px 5px black;
