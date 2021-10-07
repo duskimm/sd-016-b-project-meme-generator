@@ -3,6 +3,9 @@ const textInput = document.querySelector('#text-input');
 const memeContainer = document.querySelector('#meme-image-container');
 const imgInput = document.querySelector('#meme-insert');
 const memeImage = document.querySelector('#meme-image');
+const buttonFire = document.querySelector('#fire');
+const buttonWater = document.querySelector('#water');
+const butttonEarth = document.querySelector('#earth');
 
 function inputText() {
   const text = textInput.value;
@@ -20,3 +23,22 @@ function addImage(img) {
 }
 
 imgInput.addEventListener('change', addImage);
+
+function borderElement (buttonElement) {
+  const button = buttonElement.target;
+  if (button === buttonFire) {
+    memeContainer.style.border = '20px ridge red';
+  }
+  if (button === buttonWater) {
+    memeContainer.style.border = '15px  double blue';
+  }
+  if (button === butttonEarth) {
+    memeContainer.style.border = '17px groove green';
+  }
+}
+
+buttonFire.addEventListener('click', borderElement);
+buttonWater.addEventListener('click', borderElement);
+butttonEarth.addEventListener('click', borderElement);
+
+// fonte sobre bordas css- https://br.godaddy.com/blog/border-css-estilos-de-borda-para-usar-no-seu-site/

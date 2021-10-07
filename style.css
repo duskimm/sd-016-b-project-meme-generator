@@ -5,6 +5,22 @@
   margin-left: 20px;
 }
 
+#earth {
+  background-color: green;
+  padding: 5px;
+}
+
+#fire {
+  background-color: red;
+  padding: 5px;
+}
+
+#water {
+  background-color: blue;
+  padding: 5px;
+  margin-top: 10px;
+}
+
 h1 {
   display: flex;
   padding: 20px;
@@ -16,8 +32,24 @@ h1 {
   background-color: white;
   width: 500px;
   height: 500px;
+  margin-top: 10px;
 }
+
+#meme-text {
+  position: absolute;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
+  color: white;
+}
+
+#sample-images img {
+  width: 100px;
+}
+
+#sample-images img:hover {
+  border: 2px solid red;
 
 #text-input {
   margin-bottom: 20px;
 }
+
