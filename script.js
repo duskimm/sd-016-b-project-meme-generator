@@ -6,6 +6,7 @@ function atualizaFoto(e) {
   if (e.target.classList.contains('memes')) {
     // document.querySelector('#meme-image-container').style.backgroundImage = `url(${e.target.src})`;
     document.querySelector('#meme-image').src = e.target.src;
+    // .src = `imgs/meme${e.target.id[e.target.id.length - 1]}.png`;
   }
 }
 
@@ -24,7 +25,7 @@ function borda(a) { document.querySelector('#meme-image-container').classList = 
 
 function configurar() {
   document.querySelector('#text-input').addEventListener('input', mostraTexto);
-  document.querySelector('#meme-1').addEventListener('click', atualizaFoto);
+  document.addEventListener('click', atualizaFoto);
   document.querySelector('#meme-insert').addEventListener('change', novaImagem);
   document.querySelector('#fire').addEventListener('click', borda);
   document.querySelector('#water').addEventListener('click', borda);
