@@ -3,7 +3,8 @@ function mostraTexto(e) {
 }
 
 function atualizaFoto(e) {
-  if (e.target.classList.contains('memes')) {
+  // if (e.target.classList.contains('memes')) {
+  if (e.target.src !== undefined) {
     // document.querySelector('#meme-image-container').style.backgroundImage = `url(${e.target.src})`;
     document.querySelector('#meme-image').src = e.target.src;
     // .src = `imgs/meme${e.target.id[e.target.id.length - 1]}.png`;
