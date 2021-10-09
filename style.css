@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  /* width: max-content; */
   box-sizing: border-box;
 }
 
@@ -11,7 +10,6 @@ body {
 }
 
 #meme-text {
-  border: 1px red solid;
   position: absolute;
   color: white;
   font-size: 30px;
@@ -24,13 +22,10 @@ body {
   background-color: white;
   height: 300px;
   width: 300px;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
   border: 1px black solid;
 }
 
 #meme-image {
-  border: 1px purple solid;
   width: 298px;
   height: 298px;
 }
