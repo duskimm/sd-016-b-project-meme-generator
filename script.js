@@ -14,8 +14,9 @@ function novaImagem() {
   const reader = new FileReader();
   reader.readAsDataURL(document.querySelector('#meme-insert').files[0]);
   reader.onload = () => {
-    document.querySelector('#meme-image-container').style.backgroundImage = `
-    url(${reader.result})`;
+    // document.querySelector('#meme-image-container').style.backgroundImage = `
+    // url(${reader.result})`;
+    document.querySelector('#meme-image').src = reader.result;
   };
 }
 
