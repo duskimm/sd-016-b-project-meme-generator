@@ -1,8 +1,9 @@
 * {
-  margin: 0.25em auto;
+  margin: 0;
   padding: 0;
   text-align: center;
-  width: max-content;
+  /* width: max-content; */
+  box-sizing: border-box;
 }
 
 body {
@@ -10,18 +11,28 @@ body {
 }
 
 #meme-text {
+  border: 1px red solid;
+  position: absolute;
   color: white;
   font-size: 30px;
   text-shadow: black 5px 5px 5px;
-  width: 300px;
+  width: 298px;
 }
 
 #meme-image-container {
+  margin: 0.25em auto;
   background-color: white;
   height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 300px;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   border: 1px black solid;
+}
+
+#meme-image {
+  border: 1px purple solid;
+  width: 298px;
+  height: 298px;
 }
 
 .memes {

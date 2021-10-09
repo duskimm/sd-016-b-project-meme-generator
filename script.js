@@ -4,7 +4,8 @@ function mostraTexto(e) {
 
 function atualizaFoto(e) {
   if (e.target.classList.contains('memes')) {
-    document.querySelector('#meme-image-container').style.backgroundImage = `url(${e.target.src})`;
+    // document.querySelector('#meme-image-container').style.backgroundImage = `url(${e.target.src})`;
+    document.querySelector('#meme-image').src = e.target.src;
   }
 }
 
