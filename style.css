@@ -35,16 +35,44 @@ body {
   background-color: white;
   height: 300px;
   width: 300px;
-  border: 1px black solid;
 }
 
 #meme-image {
-  width: 298px;
-  height: 298px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .memes {
   width: 90px;
 }
+
+.padrao {
+  border: 1px black solid;
+}
+
+#fire {
+  background-color: red;
+}
+
+.fire {
+  border: 3px dashed red;
+}
+
+#water {
+  background-color: blue;
+}
+
+.water {
+  border: 5px double blue;
+}
+
+#earth {
+  background-color: green;
+}
+
+.earth {
+  border: 6px groove green;
+}
+
 
 /* Linha no final né linter */

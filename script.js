@@ -20,10 +20,15 @@ function novaImagem() {
   };
 }
 
+function borda(a) { document.querySelector('#meme-image-container').classList = a.target.id; }
+
 function configurar() {
   document.querySelector('#text-input').addEventListener('input', mostraTexto);
   document.querySelector('#meme-1').addEventListener('click', atualizaFoto);
   document.querySelector('#meme-insert').addEventListener('change', novaImagem);
+  document.querySelector('#fire').addEventListener('click', borda);
+  document.querySelector('#water').addEventListener('click', borda);
+  document.querySelector('#earth').addEventListener('click', borda);
 }
 
 window.onload = configurar;
