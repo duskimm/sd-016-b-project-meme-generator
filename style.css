@@ -15,11 +15,12 @@ body {
   align-items: flex-start;
   flex-flow: column;
   margin: 0 auto;
-  width: 500px;
+  width: 300px;
 }
 
 .dados {
   display: flex;
+  margin: 0.25em 0;
 }
 
 #meme-text {
@@ -31,10 +32,10 @@ body {
 }
 
 #meme-image-container {
-  margin: 0.25em auto;
+  margin: 0 auto;
   background-color: white;
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   display: flex;
 }
 
@@ -43,7 +44,9 @@ body {
 }
 
 .memes {
+  margin: 0.5em auto;
   width: 90px;
+  border-radius: 5px;
 }
 
 .padrao {
@@ -74,5 +77,11 @@ body {
   border: 6px groove green;
 }
 
+button {
+  border-style: none;
+  padding: 1em;
+  color: aliceblue;
+  border-radius: 6px;
+}
 
 /* Linha no final né linter */
