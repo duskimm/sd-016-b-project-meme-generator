@@ -9,8 +9,14 @@
 </head>
 <body>
   <h1>Meme Generator</h1>
-  <span>Texto:</span><input type="text" maxlength="60" id="text-input"><br>
-  <span>Foto:</span><input type="file" name="" id="meme-insert">
+  <div id="dados-container">
+    <div>
+      <label for="text-input">Texto: </label><input type="text" maxlength="60" id="text-input"><br>
+    </div>
+    <div class="dados">
+      <label for="meme-insert">Foto: </label><input type="file" name="" id="meme-insert">
+    </div>
+  </div>
   <div id='meme-image-container'>
     <h1 id="meme-text"></h1>
     <img src="" alt="" id="meme-image">

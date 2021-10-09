@@ -9,6 +9,19 @@ body {
   background-color: lightgreen;
 }
 
+#dados-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.dados {
+  display: flex;
+}
+
 #meme-text {
   position: absolute;
   color: white;
