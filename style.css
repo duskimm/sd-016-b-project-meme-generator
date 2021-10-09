@@ -11,9 +11,9 @@ body {
 
 #dados-container {
   display: flex;
+  flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-flow: column;
   margin: 0 auto;
   width: 300px;
 }
