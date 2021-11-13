@@ -53,8 +53,10 @@ input {
   height: 600px;
   margin: auto;
   position: relative;
-  /* border: 2px solid black; */
+  background-color: white;
+  border: 1px solid black;
   margin-bottom: 75px;
+  border-radius: 10px;
 }
 
 #meme-image {
