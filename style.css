@@ -15,7 +15,7 @@ main {
   margin: auto;
   background-color: white;
   border-radius: 10px;
-  margin-top: 5%;
+  margin-top: 2.5%;
   padding: 10px;
 }
 
@@ -107,4 +107,33 @@ input {
   background-color: green;
   color: white;
   border-radius: 10px;
+}
+
+#footer-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+#meme-1 {
+  margin-top: 20px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+#meme-2 {
+  margin-top: 20px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+#meme-3 {
+  margin-top: 20px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+#meme-4 {
+  margin-top: 20px;
+  width: 100px;
+  border: 1px solid black;
 }
