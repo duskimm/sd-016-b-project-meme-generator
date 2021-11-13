@@ -9,5 +9,3 @@ const loadFile = (event) => {
 input.addEventListener('input', (event) => {
   span.textContent = event.target.value;
 });
-
-window.onload = () => {};
