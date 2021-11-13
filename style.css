@@ -67,11 +67,16 @@ input {
 }
 
 #meme-text {
+  box-sizing: border-box;
   position: absolute;
-  z-index: 999;
+  width: 600px;
+  height: auto;
   font-size: 30px;
   color: white;
-  margin-left: 20%;
   margin-top: 500px;
   text-shadow: 5px 5px 5px black;
+  padding: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
